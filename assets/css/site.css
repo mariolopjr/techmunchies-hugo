@@ -1,0 +1,213 @@
+/*
+  techmunchies hand-crafted CSS
+  Faster, easier to edit, and no libraries needed
+ */
+
+/* Variables */
+:root {
+  /* Colors */
+  --site-bg-color: #ccc;
+  --main-bg-color: #3b424d;
+  --selection-bg-color: #99a6b2;
+  --text-color: #ccc;
+
+  --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    Helvetica, Arial, sans-serif;
+
+  /* Link Transitions */
+  --link-duration: .2s;
+  --link-distance: 8px;
+  --link-ease-out-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --site-bg-color: #3b424d;
+    --main-bg-color: #ccc;
+  }
+}
+
+::selection {
+  background-color: var(--selection-bg-color);
+}
+
+html, body {
+  background-color: var(--site-bg-color);
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Site */
+.site {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* Header */
+nav {
+  align-items: stretch;
+  display: flex;
+  position: relative;
+  z-index: 30;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:active,
+nav a:hover,
+nav a:focus {
+  color: white;
+}
+
+nav .nav-brand {
+  align-items: stretch;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+}
+
+nav .nav-brand a {
+  align-items: center;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  line-height: 1.5;
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+
+nav .nav-container {
+  display: none;
+  transition: max-height .2s ease-out;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .nav-container {
+    align-items: stretch;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+nav .nav-container .nav-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+nav .nav-container .nav-links a {
+  align-items: center;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  line-height: 1.5;
+  padding: 1rem 1.25rem;
+  position: relative;
+  text-decoration: none;
+}
+
+nav .nav-container .nav-links a:not(:first-of-type):not(:last-of-type) {
+  padding: 1rem .625rem;
+}
+
+nav .nav-container .nav-links a:before,
+nav .nav-container .nav-links a:before,
+nav .nav-container .nav-links a:before {
+  background-color: white;
+  bottom: 2px;
+  content: '';
+  height: 2px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transform: translateY(calc(-1 *  var(--link-distance)));
+  transition: transform 0s var(--link-ease-out-back), opacity 0s;
+}
+
+nav .nav-container .nav-links a:after,
+nav .nav-container .nav-links a:after,
+nav .nav-container .nav-links a:after {
+  background-color: white;
+  bottom: 2px;
+  content: '';
+  height: 2px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transform: translateY(calc(0.5 * var(--link-distance)));
+  transition: transform var(--link-duration) var(--link-ease-out-back), opacity var(--link-duration);
+}
+
+nav .nav-container .nav-links a:active:before,
+nav .nav-container .nav-links a:hover:before,
+nav .nav-container .nav-links a:focus:before {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform var(--link-duration) var(--link-ease-out-back), opacity var(--link-duration);
+}
+
+nav .nav-container .nav-links a:active:after,
+nav .nav-container .nav-links a:hover:after,
+nav .nav-container .nav-links a:focus:after {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0s var(--link-duration) var(--link-ease-out-back), opacity 0s var(--link-duration);
+}
+
+/* Footer */
+.footer {
+  color: var(--text-color);
+  font-size: .75rem;
+  padding: .5rem;
+  text-align: center;
+}
+
+/* Home Page */
+.home {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.home .title-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.home .title-container .title {
+  border-bottom: none;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  line-height: 1.125;
+  margin-bottom: 1.5rem;
+}
+
+.home .title-container .subtitle {
+  border-bottom: none;
+  color: white;
+  font-size: .75rem;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-top: -1.25rem;
+}

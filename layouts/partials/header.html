@@ -1,0 +1,13 @@
+<nav>
+  <div class="nav-brand"><a href="/">{{ .Site.Title }}</a></div>
+  <div class="nav-container">
+    <div class="nav-links">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" title="{{ .Title }}" {{ if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>
+          {{- .Name -}}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</nav>
