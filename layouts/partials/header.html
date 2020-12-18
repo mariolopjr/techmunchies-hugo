@@ -1,5 +1,13 @@
 <nav>
-  <div class="nav-brand"><a href="/">{{ .Site.Title }}</a></div>
+  <div class="nav-brand">
+    <a href="/">{{ .Site.Title }}</a>
+    <div class="mobile-menu">
+      <input type="checkbox" class="mobile-menu-button" />
+      <span class="mobile-menu-bar" aria-hidden="true"></span>
+      <span class="mobile-menu-bar" aria-hidden="true"></span>
+      <span class="mobile-menu-bar" aria-hidden="true"></span>
+    </div>
+  </div>
   <div class="nav-container">
     <div class="nav-links">
       {{ $currentPage := . }}

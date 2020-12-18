@@ -89,6 +89,71 @@ nav .nav-brand a {
   position: relative;
 }
 
+nav .nav-brand .mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .nav-brand .mobile-menu {
+    display: none;
+  }
+}
+
+nav .nav-brand .mobile-menu-button {
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  margin-left: auto;
+  opacity: 0;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  width: 3.25rem;
+  z-index: 2;
+}
+
+nav .nav-brand .mobile-menu-bar {
+  background-color: currentColor;
+  color: var(--text-color);
+  display: block;
+  height: 2px;
+  position: absolute;
+  right: 7%;
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+  width: 16px;
+  z-index: 1;
+}
+
+nav .nav-brand .mobile-menu-bar:first-of-type {
+  top: calc(50% - 6px);
+}
+
+nav .nav-brand .mobile-menu-bar:nth-of-type(2) {
+  top: calc(50% - 1px);
+}
+
+nav .nav-brand .mobile-menu-bar:nth-of-type(3) {
+  top: calc(50% + 4px);
+}
+
+nav .nav-brand .mobile-menu-button:checked ~ .mobile-menu-bar:first-of-type {
+  transform: translateY(5px) rotate(45deg);
+}
+
+nav .nav-brand .mobile-menu-button:checked ~ .mobile-menu-bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+nav .nav-brand .mobile-menu-button:checked ~ .mobile-menu-bar:nth-of-type(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
 nav .nav-container {
   display: none;
   transition: max-height .2s ease-out;
