@@ -304,7 +304,7 @@ nav .nav-container .nav-links a:focus:after {
 
 /* Blog Page */
 .blog {
-  margin-top: -.75rem;
+  margin: 3rem 2rem 0 2rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -326,7 +326,13 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .blog li:last-of-type {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .blog li:last-of-type {
+    margin-bottom: 6rem;
+  }
 }
 
 .blog li a {
