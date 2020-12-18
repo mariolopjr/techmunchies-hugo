@@ -31,7 +31,7 @@ canonifyURLs = true
     identifier = "home"
     name = "home"
     title = "home"
-    url = "/home/"
+    url = "/"
     weight = 10
 
   [[menu.main]]

@@ -10,6 +10,7 @@
   --main-bg-color: #3b424d;
   --selection-bg-color: #99a6b2;
   --text-color: #ccc;
+  --text-shadow: #3b424d;
 
   --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -117,9 +118,10 @@ nav .nav-container .mobile-menu-bar {
   position: absolute;
   right: 7%;
   transform-origin: center;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
   width: 16px;
   z-index: 1;
 }
@@ -195,6 +197,13 @@ nav .nav-container .nav-links a {
   text-decoration: none;
 }
 
+nav .nav-container .nav-links a.active:after {
+  background-color: white;
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
 nav .nav-container .nav-links a:not(:first-of-type):not(:last-of-type) {
   padding: 1rem .625rem;
 }
@@ -226,7 +235,9 @@ nav .nav-container .nav-links a:after {
   position: absolute;
   right: 0;
   transform: translateY(calc(0.5 * var(--link-distance)));
-  transition: transform var(--link-duration) var(--link-ease-out-back), opacity var(--link-duration);
+  transition:
+    transform var(--link-duration) var(--link-ease-out-back),
+    opacity var(--link-duration);
 }
 
 nav .nav-container .nav-links a:active:before,
@@ -234,7 +245,9 @@ nav .nav-container .nav-links a:hover:before,
 nav .nav-container .nav-links a:focus:before {
   opacity: 1;
   transform: translateY(0);
-  transition: transform var(--link-duration) var(--link-ease-out-back), opacity var(--link-duration);
+  transition:
+    transform var(--link-duration) var(--link-ease-out-back),
+    opacity var(--link-duration);
 }
 
 nav .nav-container .nav-links a:active:after,
@@ -242,7 +255,9 @@ nav .nav-container .nav-links a:hover:after,
 nav .nav-container .nav-links a:focus:after {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 0s var(--link-duration) var(--link-ease-out-back), opacity 0s var(--link-duration);
+  transition:
+    transform 0s var(--link-duration) var(--link-ease-out-back),
+    opacity 0s var(--link-duration);
 }
 
 /* Footer */
@@ -285,4 +300,79 @@ nav .nav-container .nav-links a:focus:after {
   font-weight: 300;
   line-height: 1.25;
   margin-top: -1.25rem;
+}
+
+/* Blog Page */
+.blog {
+  margin-top: -.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .blog {
+    margin-top: 6.5rem;
+  }
+}
+
+.blog li {
+  color: white;
+  list-style-type: none;
+  margin: 0 auto;
+  max-width: 30em;
+  opacity: 0.7;
+}
+
+.blog li:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.blog li:last-of-type {
+  margin-bottom: 6rem;
+}
+
+.blog li a {
+  box-shadow:
+    0 -1px 0 0 var(--text-shadow) inset,
+    0 -2px 0 0 transparent inset;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.7;
+  text-decoration: none;
+  text-shadow:
+    0px -2px 0 var(--text-shadow),
+    0px -1px 0 var(--text-shadow),
+    0px 0px 0 var(--text-shadow),
+    2px -2px 0 var(--text-shadow),
+    2px -1px 0 var(--text-shadow),
+    2px 0px 0 var(--text-shadow),
+    -2px -2px 0 var(--text-shadow),
+    -2px -1px 0 var(--text-shadow),
+    -2px 0px 0 var(--text-shadow),
+    1px -2px 0 var(--text-shadow),
+    1px -1px 0 var(--text-shadow),
+    1px 0px 0 var(--text-shadow),
+    -1px -2px 0 var(--text-shadow),
+    -1px -1px 0 var(--text-shadow),
+    -1px 0px 0 var(--text-shadow),
+    0px -2px 0 var(--text-shadow),
+    0px -1px 0 var(--text-shadow),
+    0px 0px 0 var(--text-shadow);
+  transition: all .3s ease-in;
+}
+
+.blog li a:active,
+.blog li a:focus,
+.blog li a:hover {
+  box-shadow:
+    0 -1px 0 0 white inset,
+    0 -2px 0 0 var(--text-shadow);
+  color: white;
+  opacity: 0.9;
+  transition: all .3s ease-out;
+}
+
+.blog li small {
+  display: block;
+  font-size: smaller;
+  margin-top: 0.3rem;
 }
