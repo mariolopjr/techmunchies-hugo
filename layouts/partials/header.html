@@ -1,21 +1,21 @@
 <nav>
-  <div class="nav-brand">
-    <a href="/">{{ .Site.Title }}</a>
+  <div class="nav-container">
+    <a href="/" class="nav-brand">{{ .Site.Title }}</a>
     <div class="mobile-menu">
       <input type="checkbox" class="mobile-menu-button" />
       <span class="mobile-menu-bar" aria-hidden="true"></span>
       <span class="mobile-menu-bar" aria-hidden="true"></span>
       <span class="mobile-menu-bar" aria-hidden="true"></span>
-    </div>
-  </div>
-  <div class="nav-container">
-    <div class="nav-links">
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" title="{{ .Title }}" {{ if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>
-          {{- .Name -}}
-        </a>
-      {{ end }}
+      <div class="nav-links-container">
+        <div class="nav-links">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" title="{{ .Title }}" {{ if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>
+              {{- .Name -}}
+            </a>
+          {{ end }}
+        </div>
+      </div>
     </div>
   </div>
 </nav>
