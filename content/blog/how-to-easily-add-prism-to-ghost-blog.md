@@ -17,10 +17,22 @@ The code below will load the Prism script from the Cloudflare CDN, which means i
 3. Copy the following code into the Blog Header box under any existing code.
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-okaidia.min.css" integrity="sha256-e1bqZBSPbpH18ISDr1aR1mwb4PWTG/3QFxE51/22n14=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha256-SA3HrKLu4tldegZQVdUx8Cwwo2hQFIu7iW6UOo6OdS4=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/command-line/prism-command-line.min.css" integrity="sha256-QViEGvwX/42OrD49huSb2mGZtUQwVKNA5Ux58tMWLOs=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha256-oqIQBM3BkdYsUyIdtwZql/C/XN5mGcz3LERZCJU/C0I=" crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-okaidia.min.css"
+  integrity="sha256-e1bqZBSPbpH18ISDr1aR1mwb4PWTG/3QFxE51/22n14="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha256-SA3HrKLu4tldegZQVdUx8Cwwo2hQFIu7iW6UOo6OdS4="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/command-line/prism-command-line.min.css"
+  integrity="sha256-QViEGvwX/42OrD49huSb2mGZtUQwVKNA5Ux58tMWLOs="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/toolbar/prism-toolbar.min.css"
+  integrity="sha256-oqIQBM3BkdYsUyIdtwZql/C/XN5mGcz3LERZCJU/C0I="
+  crossorigin="anonymous" />
 ```
 
 <br>
@@ -271,13 +283,13 @@ vi php.ini
 #### Plugins
 I've listed the plugins I am using with Prism, click on the plugin name to learn more.
 
-[Prism](http://prismjs.com)
-[Autoloader](http://prismjs.com/plugins/autoloader)
-[Command Line](http://prismjs.com/plugins/command-line)
-[Copy to Clipboard](http://prismjs.com/plugins/copy-to-clipboard)
-[Line Numbers](http://prismjs.com/plugins/line-numbers)
-[Normalize Whitespace](http://prismjs.com/plugins/normalize-whitespace)
-[Toolbar](http://prismjs.com/plugins/toolbar)
+[Prism](http://prismjs.com)  
+[Autoloader](http://prismjs.com/plugins/autoloader)  
+[Command Line](http://prismjs.com/plugins/command-line)  
+[Copy to Clipboard](http://prismjs.com/plugins/copy-to-clipboard)  
+[Line Numbers](http://prismjs.com/plugins/line-numbers)  
+[Normalize Whitespace](http://prismjs.com/plugins/normalize-whitespace)  
+[Toolbar](http://prismjs.com/plugins/toolbar)  
 
 
 [^1]: My helper functions may be viewed at the following [gist](https://gist.github.com/mariolopjr/926875d4e7b6453378d2be5091cdfdbc)

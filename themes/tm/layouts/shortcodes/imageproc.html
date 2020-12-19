@@ -1,0 +1,18 @@
+{{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "image")) }}
+{{ $alt := .Get "alt" }}
+{{ $src := $image }}
+{{ $srcSet := (print $image.RelPermalink " " $image.Width "w") }}
+
+{{ range (slice "480" "640" "1280") }}
+  {{ if gt $image.Width . }}
+    {{ $resized := $image.Resize (print . "x") }}
+    {{ $srcSet = (print $srcSet ", "  $resized.RelPermalink " " . "w") }}
+  {{ end }}
+{{ end }}
+
+<img
+  src="{{ $src.RelPermalink }}"
+  srcset="{{ $srcSet }}"
+  alt="{{ $alt }}"
+  loading="lazy"
+  data-inner="{{ .Inner }}" />

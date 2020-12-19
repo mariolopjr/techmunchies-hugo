@@ -3,4 +3,4 @@
 {{ if hugo.IsProduction }}
   {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
 {{ end }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous"{{ end }}>
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous"{{ end }} />

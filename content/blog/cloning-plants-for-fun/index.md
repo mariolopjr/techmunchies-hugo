@@ -28,13 +28,13 @@ _Note 2: Some of these items come with more than you need, it's unfortunate, but
 
 Making the cloner is easy: using the hole saw, around the edge of the gasket lid, cut 8 two inch holes. Try to space them apart evenly, so that all the holes fit (though, it doesn't have to be perfect). Once you are done, it should look something similar to the image below (ignore the hose, for now, my cloner was already completed at the time of the picture).
 
-![Plastic Pail with Gasket Lid and 8 3" Holes Cut Into](gasket-lid-with-cutouts.jpg)
+{{<imageproc image="gasket-lid-with-cutouts" alt="Plastic Pail with Gasket Lid and 8 3in Holes Cut Into" />}}
 
 Once you've got the holes cut, cut a small hole in the middle large enough to fit the air hose that you purchased. Once that is done, thread the hose through the hole, enough to make it to the bottom of the pail (take a look at the above image if you are unsure of what to do).
 
 Next, insert the air stone to the bottom of the hose (the end that's in the pail).
 
-![Air Hose with Air Stone Inserted](air-stone.jpg)
+{{<imageproc image="air-stone" alt="Air Hose with Air Stone Inserted" />}}
 
 You are now done with creating the cloner. Now you are ready to start cloning!
 
@@ -42,23 +42,23 @@ You are now done with creating the cloner. Now you are ready to start cloning!
 
 Now that your cloner is ready to use, it's time to get 8 four inch cuts of the plants you want to clone. I will be using a variety of tomatoes, mint, and basil. Make sure to cut from the top of the plant, on one of the (hopefully) many branches it has (never from the main branch). Also, cut at a 45-degree angle. Take a look at a couple of cuts I did below if you are not sure how to proceed.
 
-![Overview of Cut Plants](cut-plants.jpg)
+{{<imageproc image="cut-plants" alt="Overview of Cut Plants" />}}
 
-![Close-up of Cut Plants](cut-plants-close.jpg)
+{{<imageproc image="cut-plants-close" alt="Close-up of Cut Plants" />}}
 
 Once you have your 8 cuts (it doesn't have to be 8, however, the cloner supports up to 8 plants), strip the leaves at the bottom of the stem (only keep a couple towards the top), and insert them into the net cup lids until they reach the bottom of the net cup.
 
-![Close-up of Cut Plants at the Bottom of the Net Cup](cut-plants-net-cup-bottom.jpg)
+{{<imageproc image="cut-plants-net-cup-bottom" alt="Close-up of Cut Plants at the Bottom of the Net Cup" />}}
 
-![All Cut Plants in Net Cups](all-cut-plants-in-net-cups.jpg)
+{{<imageproc image="all-cut-plants-in-net-cups" alt="All Cut Plants in Net Cups" />}}
 
 Next, it's time to fill up the pail full of water! Put one of the net cups into the pail, and fill it up full of water until the water is about 1 inch from the bottom of the net cup.
 
-![Pail Filled with Water](pail-filled-with-water.jpg)
+{{<imageproc image="pail-filled-with-water" alt="Pail Filled with Water" />}}
 
 Now it's time to insert your net cups, connect the air hose to the air pump, plug it into power, and place it near a window! We should start seeing roots grow from our cuts in the next couple of weeks.
 
-![Project Finished with all Cut Plants in Net Cups inside Pail, with Air Pump Connected](finished-project.jpg)
+{{<imageproc image="finished-project" alt="Project Finished with all Cut Plants in Net Cups inside Pail, with Air Pump Connected" />}}
 
 [^1]: For mojitos of course!
 

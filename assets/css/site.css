@@ -335,7 +335,8 @@ nav .nav-container .nav-links a:focus:after {
   }
 }
 
-.blog li a {
+.blog li a,
+.post .post-container article a {
   box-shadow:
     0 -1px 0 0 var(--text-shadow) inset,
     0 -2px 0 0 transparent inset;
@@ -368,7 +369,10 @@ nav .nav-container .nav-links a:focus:after {
 
 .blog li a:active,
 .blog li a:focus,
-.blog li a:hover {
+.blog li a:hover,
+.post .post-container article a:active,
+.post .post-container article a:focus,
+.post .post-container article a:hover {
   box-shadow:
     0 -1px 0 0 white inset,
     0 -2px 0 0 var(--text-shadow);
@@ -382,3 +386,128 @@ nav .nav-container .nav-links a:focus:after {
   font-size: smaller;
   margin-top: 0.3rem;
 }
+
+/* Post Page */
+.post {
+  margin: 4rem auto;
+  max-width: 60em;
+}
+
+.post .post-container {
+  color: white;
+  flex: none;
+  margin-left: 4.33333%;
+  width: 83.33333%;
+}
+
+@media only screen and (min-width: 768px) {
+  .post .post-container {
+    margin-left: 8.33333%;
+  }
+}
+
+.post .post-container .title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.125;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+@media only screen and (min-width: 768px) {
+  .post .post-container .title {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+.post .post-container .description {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .post .post-container .description {
+    font-size: 2rem;
+  }
+}
+
+.post .post-container .separator {
+  background-color: white;
+  margin-left: 0 auto;
+  max-width: 33%;
+  opacity: .5;
+}
+
+.post .post-container .date {
+  font-size: 12px;
+  letter-spacing: 1.3;
+  margin-bottom: 1em;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.post .post-container article {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 40em;
+  margin: 2rem auto;
+}
+
+.post .post-container article a {
+  font-size: inherit;
+}
+
+.post .post-container article img {
+  border-radius: 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 3px 8px 0px,
+    rgba(0, 0, 0, 0.16) 0px 0px 0px 1px;
+  max-width: 480px;
+}
+
+.post .post-container article img + img {
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .post .post-container article img {
+    max-width: 640px;
+  }
+}
+
+/* Syntax Highlighting */
+.highlight pre {
+  border-radius: 6px;
+  overflow: auto;
+  padding: 1rem;
+}
+
+/* TODO: Figure out how to override Hugo's syntax processing
+.highlight pre code[class*=language-] {
+  position: relative;
+}
+
+.highlight pre code[class*=language-]:before {
+  color: hsla(0, 0%, 100%, .4);
+  font-size: .75rem;
+  position: absolute;
+  right: 1em;
+  top: -.5rem;
+  z-index: 2;
+}
+
+.highlight pre code[class~=language-js]:before {
+  content: "js";
+}
+
+.highlight pre code[class~=language-html]:before {
+  content: "html";
+}
+
+.highlight pre code[class~=language-md]:before {
+  content: "md";
+}
+*/
