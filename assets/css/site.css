@@ -426,14 +426,8 @@ nav .nav-container .nav-links a:focus:after {
 .post .post-container {
   color: white;
   flex: none;
-  margin-left: 4.33333%;
+  margin: 0 auto;
   width: 83.33333%;
-}
-
-@media only screen and (min-width: 768px) {
-  .post .post-container {
-    margin-left: 8.33333%;
-  }
 }
 
 .post .post-container .title {
@@ -496,6 +490,7 @@ nav .nav-container .nav-links a:focus:after {
     rgba(0, 0, 0, 0.4) 0px 3px 8px 0px,
     rgba(0, 0, 0, 0.16) 0px 0px 0px 1px;
   max-width: 480px;
+  width: 100%;
 }
 
 .post .post-container article img + img {
