@@ -1,0 +1,22 @@
+<li>
+  <a href="{{ .Permalink }}">
+    <div class="project-image">
+      {{ $image := .Page.Resources.GetMatch .Params.cover }}
+      {{ $src := $image }}
+      {{ $srcSet := (print $image.RelPermalink " " $image.Width "w") }}
+
+      {{ range (slice "570" "855" "1140") }}
+        {{ if gt $image.Width . }}
+          {{ $resized := $image.Resize (print . "x") }}
+          {{ $srcSet = (print $srcSet ", "  $resized.RelPermalink " " . "w") }}
+        {{ end }}
+      {{ end }}
+      <img
+        src="{{ $src.RelPermalink }}"
+        srcset="{{ $srcSet }}"
+        alt="{{ .Title }} — {{ .Description }}"
+        loading="lazy" />
+    </div>
+    <div class="project-description">{{ .Title }} — {{ .Description }}</div>
+  </a>
+</li>

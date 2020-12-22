@@ -1,7 +1,19 @@
 {{ define "main" }}
   <main aria-role="main">
-    <div class="blog">
-      Test
+    <div class="projects">
+      <div class="project-titles">
+        <h1 class="title">our projects</h1>
+        <div class="subtitle">
+          I love to create blazing fast and beautiful sites, that are
+          maintenance free, allowing your company to focus on more important
+          issues.
+        </div>
+      </div>
+      <div class="project-items">
+        {{ range .Pages }}
+          {{ .Render "li"}}
+        {{ end }}
+      </div>
     </div>
   </main>
 {{ end }}
