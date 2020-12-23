@@ -11,6 +11,14 @@
   --selection-bg-color: #99a6b2;
   --text-color: #ccc;
   --text-shadow: #3b424d;
+  --nav-link-bar: #fff;
+  --nav-link-hover: #fff;
+  --home-subtitle: #fff;
+  --blog-link: #fff;
+  --post-color: #fff;
+  --article-color: rgba(255, 255, 255, 0.9);
+  --project-titles-color: #fff;
+  --project-description-color: #fff;
 
   --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -24,8 +32,20 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    /* Colors */
     --site-bg-color: #3b424d;
     --main-bg-color: #ccc;
+    --selection-bg-color: #99a6b2;
+    --text-color: #3b424d;
+    --text-shadow: #ccc;
+    --nav-link-bar: #000;
+    --nav-link-hover: #000;
+    --home-subtitle: #000;
+    --blog-link: #000;
+    --post-color: #000;
+    --article-color: rgba(0, 0, 0, 0.9);
+    --project-titles-color: #000;
+    --project-description-color: #000;
   }
 }
 
@@ -69,7 +89,7 @@ nav a {
 nav a:active,
 nav a:hover,
 nav a:focus {
-  color: white;
+  color: var(--nav-link-hover);
 }
 
 nav .nav-container {
@@ -172,7 +192,7 @@ nav .nav-links-container {
 }
 
 nav .nav-container .mobile-menu-button:checked ~ .nav-links-container {
-  box-shadow: 0 8px 16px rgba(10,10,10,.1);
+  box-shadow: 0 8px 16px rgba(10, 10, 10, .1);
   display: block;
   left: 0;
   position: absolute;
@@ -198,7 +218,7 @@ nav .nav-container .nav-links a {
 }
 
 nav .nav-container .nav-links a.active:after {
-  background-color: white;
+  background-color: var(--nav-link-bar);
   opacity: 1;
   transform: translateY(0);
   transition: none;
@@ -211,7 +231,7 @@ nav .nav-container .nav-links a:not(:first-of-type):not(:last-of-type) {
 nav .nav-container .nav-links a:before,
 nav .nav-container .nav-links a:before,
 nav .nav-container .nav-links a:before {
-  background-color: white;
+  background-color: var(--nav-link-bar);
   bottom: 2px;
   content: '';
   height: 2px;
@@ -226,7 +246,7 @@ nav .nav-container .nav-links a:before {
 nav .nav-container .nav-links a:after,
 nav .nav-container .nav-links a:after,
 nav .nav-container .nav-links a:after {
-  background-color: white;
+  background-color: var(--nav-link-bar);
   bottom: 2px;
   content: '';
   height: 2px;
@@ -330,7 +350,7 @@ nav .nav-container .nav-links a:focus:after {
 
 .home .title-container .subtitle {
   border-bottom: none;
-  color: white;
+  color: var(--home-subtitle);
   font-size: .75rem;
   font-weight: 300;
   line-height: 1.25;
@@ -349,7 +369,7 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .blog li {
-  color: white;
+  color: var(--blog-link);
   list-style-type: none;
   margin: 0 auto;
   max-width: 30em;
@@ -375,7 +395,7 @@ nav .nav-container .nav-links a:focus:after {
   box-shadow:
     0 -1px 0 0 var(--text-shadow) inset,
     0 -2px 0 0 transparent inset;
-  color: white;
+  color: var(--blog-link);
   font-size: 1.2rem;
   font-weight: 300;
   opacity: 0.7;
@@ -409,9 +429,9 @@ nav .nav-container .nav-links a:focus:after {
 .post .post-container article a:focus,
 .post .post-container article a:hover {
   box-shadow:
-    0 -1px 0 0 white inset,
+    0 -1px 0 0 var(--blog-link) inset,
     0 -2px 0 0 var(--text-shadow);
-  color: white;
+  color: var(--blog-link);
   opacity: 0.9;
   transition: all .3s ease-out;
 }
@@ -429,7 +449,7 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .post .post-container {
-  color: white;
+  color: var(--post-color);
   flex: none;
   margin: 0 auto;
   width: 83.33333%;
@@ -465,10 +485,10 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .post .post-container .separator {
-  background-color: white;
-  margin-left: 0 auto;
-  max-width: 33%;
-  opacity: .5;
+  background-color: var(--post-color);
+  margin: 0 auto;
+  max-width: 50%;
+  opacity: .8;
 }
 
 .post .post-container .date {
@@ -480,7 +500,7 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .post .post-container article {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--article-color);
   max-width: 40em;
   margin: 2rem auto;
 }
@@ -554,7 +574,7 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .projects .project-titles {
-  color: white;
+  color: var(--project-titles-color);
 }
 
 .projects .project-titles h1.title {
@@ -647,7 +667,7 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .projects .project-items .project-description {
-  color: white;
+  color: var(--project-description-color);
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.125;
@@ -816,7 +836,7 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .project .project-description {
-  color: white;
+  color: var(--project-description-color);
   font-size: 1rem;
   margin: 0 auto;
   max-width: 40rem;
