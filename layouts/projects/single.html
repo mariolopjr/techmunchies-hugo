@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <main aria-role="main">
+    <div class="project">
+      <div class="project-hero" style="background-color: {{ .Params.maincolor }};">
+        <div class="project-details">
+          <div class="project-tagline" style="color: {{ .Params.taglinecolor }};">{{ .Params.tagline }}</div>
+          <h1 class="project-title">
+            <a
+              href="{{ .Params.link }}"
+              target="_blank"
+              style="color: {{ .Params.titlecolor }};">{{ .Title }}</a>
+          </h1>
+          <a
+            href="/projects"
+            class="project-backnav {{ .Params.backnavcolor }}"
+          >
+            <svg
+              class="{{ .Params.backnavcolor }}"
+              width=10
+              height=14
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g stroke="#000" fill="none" fillRule="evenodd">
+                <path d="M8.5.964L13.036 5.5 8.5 10.036" />
+                <path d="M12.5 5.5H.5" strokeLinecap="square" />
+              </g>
+            </svg>
+            Back to projects
+          </a>
+        </div>
+        <div class="project-image">
+          {{ $image := .Page.Resources.GetMatch .Params.cover }}
+          {{ $src := $image }}
+          {{ $srcSet := (print $image.RelPermalink " " $image.Width "w") }}
+
+          {{ range (slice "570" "855" "1140") }}
+            {{ if gt $image.Width . }}
+              {{ $resized := $image.Resize (print . "x") }}
+              {{ $srcSet = (print $srcSet ", "  $resized.RelPermalink " " . "w") }}
+            {{ end }}
+          {{ end }}
+          <img
+            src="{{ $src.RelPermalink }}"
+            srcset="{{ $srcSet }}"
+            alt="{{ .Title }} — {{ .Description }}"
+            loading="lazy" />
+        </div>
+      </div>
+      <div class="project-description">{{ .Content }}</div>
+    </div>
+  </main>
+{{ end }}

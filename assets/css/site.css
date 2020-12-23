@@ -290,6 +290,11 @@ nav .nav-container .nav-links a:focus:after {
   }
 }
 
+.content-project {
+  margin-top: .5rem;
+  max-width: 100%;
+}
+
 /* Footer */
 .footer {
   color: var(--text-color);
@@ -655,4 +660,168 @@ nav .nav-container .nav-links a:focus:after {
 .projects .project-items .project-description:hover {
   opacity: .7;
   transition: all .3s ease-out;
+}
+
+/* Project (single) Page */
+.project {
+  margin: 0 auto;
+}
+
+.project .project-hero {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 0 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .project-hero {
+    padding: 0 0 0 4rem;
+  }
+}
+
+.project .project-details {
+  display: inline-block;
+  margin: 1.5rem 0.5rem 2.5rem 0.5rem;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .project-details {
+    max-width: 40%;
+  }
+}
+
+.project .project-details .project-tagline {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .project-details .project-tagline {
+    font-size: 4.69rem;
+  }
+}
+
+.project .project-details .project-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+  margin-bottom: 5rem;
+  word-break: break-word;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .project-details .project-title {
+    font-size: 3.7rem;
+    font-weight: 400;
+    line-height: 4.2rem;
+  }
+}
+
+.project .project-details .project-title a {
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--main-bg-color);
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.project .project-details .project-backnav {
+  font-size: 1rem;
+  text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: initial;
+  transition-property: color;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .project-details .project-backnav {
+    font-size: 1.2rem;
+  }
+}
+
+.project .project-details .project-backnav:active svg,
+.project .project-details .project-backnav:focus svg,
+.project .project-details .project-backnav:hover svg {
+  transform: rotate(180deg), translateX(0.25rem);
+}
+
+.project .project-details .project-backnav svg {
+  margin-right: .5rem;
+  overflow: visible;
+  transform: rotate(180deg);
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(.25, 1, 0.25, 1);
+  transition-delay: initial;
+  transition-property: transform;
+  vertical-align: middle;
+}
+
+.project .project-details .project-backnav svg g {
+  stroke: currentcolor;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: initial;
+  transition-property: color;
+}
+
+.project .project-details .project-backnav.project-backnav-white {
+  color: white;
+}
+
+.project .project-details .project-backnav.project-backnav-white:active,
+.project .project-details .project-backnav.project-backnav-white:focus,
+.project .project-details .project-backnav.project-backnav-white:hover {
+  color: black;
+}
+
+.project .project-details .project-backnav.project-backnav-black {
+  color: black;
+}
+
+.project .project-details .project-backnav.project-backnav-black:active,
+.project .project-details .project-backnav.project-backnav-black:focus,
+.project .project-details .project-backnav.project-backnav-black:hover {
+  color: white;
+}
+
+.project .project-image {
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .project-image {
+    height: 100%;
+    width: 55%;
+  }
+}
+
+.project .project-image img {
+  box-shadow:
+    0 3px 8px 0 rgba(0, 0, 0, .4),
+    0 0 0 1px rgba(0, 0, 0, .16);
+  border: 0;
+  max-width: 660px;
+  width: 100%;
+}
+
+.project .project-description {
+  color: white;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 40rem;
+  opacity: .9;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .project .project-description {
+    font-size: 1.25rem;
+  }
 }

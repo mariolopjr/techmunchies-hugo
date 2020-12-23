@@ -10,7 +10,7 @@ link: https://wiagencies.com
 maincolor: "#209cee"
 titlecolor: "#000"
 taglinecolor: "#000"
-hovercolor: "#fff"
+backnavcolor: project-backnav-black
 draft: false
 ---
 World Insurance wanted one thing above else, simplicity. All the information

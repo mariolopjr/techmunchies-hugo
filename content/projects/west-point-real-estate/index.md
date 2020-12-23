@@ -10,7 +10,7 @@ link: https://westpointrealtors.com
 maincolor: "#00d1b2"
 titlecolor: "#000"
 taglinecolor: "#000"
-hovercolor: "#fff"
+backnavcolor: project-backnav-black
 draft: false
 ---
 For West Point Real Estate, we wanted to ensure that nothing separated you from

@@ -4,7 +4,7 @@
     <body>
         <div class="site">
           {{- partial "header.html" . -}}
-          <div class="content">
+          <div class="content{{ if and (eq .Type "projects") .IsPage }} content-project{{ end }}">
             {{- block "main" . }}{{- end }}
           </div>
           {{- partial "footer.html" . -}}
