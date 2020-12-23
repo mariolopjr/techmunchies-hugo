@@ -10,7 +10,7 @@
         <div class="nav-links">
           {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" title="{{ .Title }}" {{ if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>
+            <a href="{{ .URL | safeURL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" title="{{ .Title }}" {{ if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }}>
               {{- .Name -}}
             </a>
           {{ end }}

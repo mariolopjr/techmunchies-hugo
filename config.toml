@@ -52,7 +52,7 @@ canonifyURLs = true
     identifier = "altstore"
     name = "altstore"
     title = "altstore"
-    url = "/altstore/"
+    url = "altstore://source?url=https://altstore.techmunchies.net"
     weight = 40
 
 [markup]
