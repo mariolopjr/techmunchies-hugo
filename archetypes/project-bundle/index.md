@@ -6,7 +6,7 @@ link: https://ismylink.com
 maincolor: "#000000"
 titlecolor: "#000000"
 taglinecolor: "#000000"
-hovercolor: "#000000"
+backnavcolor: project-backnav-black
 draft: true
 tagline: >-
   Fill tagline here
