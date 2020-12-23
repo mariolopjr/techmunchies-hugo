@@ -291,7 +291,7 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .content-project {
-  margin-top: .5rem;
+  margin: 0.5rem 0 0 0;
   max-width: 100%;
 }
 
@@ -694,6 +694,8 @@ nav .nav-container .nav-links a:focus:after {
 .project .project-details .project-tagline {
   font-size: 2.5rem;
   font-weight: 500;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
   margin-bottom: 1rem;
   word-break: break-word;
 }
@@ -729,6 +731,8 @@ nav .nav-container .nav-links a:focus:after {
 }
 
 .project .project-details .project-backnav {
+  align-items: center;
+  display: flex;
   font-size: 1rem;
   text-decoration: none;
   transition-duration: 250ms;
