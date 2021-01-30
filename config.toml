@@ -7,6 +7,7 @@ languageCode = "en-us"
 DefaultContentLanguage = "en"
 paginate = 12
 
+disableKinds = ["taxonomy", "taxonomyTerm"]
 enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
